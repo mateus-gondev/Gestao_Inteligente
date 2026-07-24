@@ -1,0 +1,272 @@
+.cadastro-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--preto-cinza);
+    overflow: hidden;
+}
+
+/* ── Animações de entrada e transição ── */
+
+@keyframes authFadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes authSlideFromRight {
+  from {
+    opacity: 0;
+    transform: translate3d(48px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes authSlideFromLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-48px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes authBannerReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(32px, 0, 0) scale(1.03);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.cadastro-container.auth-enter-initial .cadastro-form-wrapper > * {
+  animation: authFadeSlideUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cadastro-container.auth-enter-initial .cadastro-header {
+  animation-delay: 0.08s;
+}
+
+.cadastro-container.auth-enter-initial .cadastro-form {
+  animation-delay: 0.18s;
+}
+
+.cadastro-container.auth-enter-initial .login-footer {
+  animation-delay: 0.3s;
+}
+
+.cadastro-container.auth-enter-initial .cadastro-banner {
+  animation: authBannerReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.12s;
+}
+
+.cadastro-container.auth-enter-from-right .cadastro-form-wrapper {
+  animation: authSlideFromRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cadastro-container.auth-enter-from-right .cadastro-banner {
+  animation: authSlideFromRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.06s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cadastro-container.auth-enter-initial .cadastro-form-wrapper > *,
+  .cadastro-container.auth-enter-initial .cadastro-banner,
+  .cadastro-container.auth-enter-from-right .cadastro-form-wrapper,
+  .cadastro-container.auth-enter-from-right .cadastro-banner {
+    animation: none;
+  }
+}
+
+/* Formulário (lado Esquerdo) */
+
+.cadastro-form-wrapper{
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--branco);
+    padding-left: 200px;
+}
+
+.cadastro-header{
+    width: 100%;
+    max-width: 400px;
+}
+
+.cadastro-logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cadastro-logo img {
+    width: 38px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+.cadastro-logo h1 {
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+.cadastro-subtitle {
+    color: var(--branco-cinza-60);
+    font-size: clamp(11px, 1.2vw, 13px);
+    margin: 12px 0 36px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+/* Campos do formulário */
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+.cadastro-form input[type="text"],
+.cadastro-form input[type="email"],
+.cadastro-form input[type="password"],
+.cadastro-fomr input[type="texte"]{
+    width: 100%;
+    background-color: var(--preto-azul-50);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 15px 20px;
+    color: var(--branco);
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.cadastro-form input::placeholder {
+    color: var(--branco-cinza-60);
+  }
+
+.cadastro-form input:focus {
+    outline: none;
+    border-color: var(--azul);
+  }
+  
+/* Campo de senha */
+
+.senha-wrapper {
+    position: relative;
+  }
+  
+  .senha-wrapper input {
+    padding-right: 48px;
+  }
+  
+  .toggle-senha {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--branco-cinza-60);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+  }
+  
+  .toggle-senha:hover {
+    color: var(--branco);
+  }
+
+/* Botão Entrar */
+.btn-entrar {
+    width: 100%;
+    background-color: var(--azul);
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+  }
+  
+  .btn-entrar:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-entrar:active {
+    transform: scale(0.98);
+  }
+
+
+/* ── Rodapé ── */
+.login-footer {
+    margin-top: 28px;
+    margin-left: 110px;
+    font-size: 15px;
+    color: var(--branco-cinza-60);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .login-footer a {
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+    margin-left: 2px;
+  }
+  
+  .login-footer a:hover {
+    opacity: 0.85;
+  }
+  
+
+/* Banner (Lado Direito) */
+.cadastro-banner{
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.cadastro-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
