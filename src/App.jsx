@@ -1,7 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom'
-import Login from './pages/Login/login.jsx'
-import Cadastro from './pages/Cadastro/cadastro.jsx'
+import Login from './pages/Auth/login.jsx'
+import Cadastro from './pages/Auth/cadastro.jsx'
 
 function App(){
     return(

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-import "./cadastro.css";
+import "../../assets/css/cadastro.css";
 import bannerCadastro from "../../assets/imgs/BannerCadastro.png";
 import logoReseti from "../../assets/imgs/LogoReseti.png";
 
