@@ -82,7 +82,7 @@ function Login() {
               Lembre-me
             </label>
 
-            <a href="#" className="forgot-password">
+            <a href="/esqueci" className="forgot-password">
               Esqueci minha senha
             </a>
           </div>
