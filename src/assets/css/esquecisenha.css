@@ -1,0 +1,269 @@
+/* ── Container principal (mobile-first) ── */
+
+.esqueci-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 28px 20px 40px;
+  background-color: var(--preto-cinza);
+  overflow-x: hidden;
+}
+
+/* ── Animações de entrada e transição ── */
+
+@keyframes authFadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes authSlideFromLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-48px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.esqueci-container.auth-enter-initial .esqueci-header,
+.esqueci-container.auth-enter-initial .esqueci-form,
+.esqueci-container.auth-enter-initial .esqueci-footer {
+  animation: authFadeSlideUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.esqueci-container.auth-enter-initial .esqueci-header {
+  animation-delay: 0.08s;
+}
+
+.esqueci-container.auth-enter-initial .esqueci-form {
+  animation-delay: 0.18s;
+}
+
+.esqueci-container.auth-enter-initial .esqueci-footer {
+  animation-delay: 0.3s;
+}
+
+.esqueci-container.auth-enter-from-left .esqueci-form-wrapper {
+  animation: authSlideFromLeft 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .esqueci-container.auth-enter-initial .esqueci-header,
+  .esqueci-container.auth-enter-initial .esqueci-form,
+  .esqueci-container.auth-enter-initial .esqueci-footer,
+  .esqueci-container.auth-enter-from-left .esqueci-form-wrapper {
+    animation: none;
+  }
+}
+
+/* ── Wrapper do formulário ── */
+
+.esqueci-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  color: var(--branco);
+  text-align: center;
+}
+
+/* ── Cabeçalho ── */
+
+.esqueci-header {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.esqueci-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.esqueci-logo img {
+  width: 48px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.esqueci-logo h1 {
+  font-size: clamp(20px, 5vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.esqueci-subtitle {
+  color: var(--branco-cinza-60);
+  font-size: clamp(10px, 2.8vw, 13px);
+  margin-top: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Formulário ── */
+
+.esqueci-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.esqueci-form input[type="email"],
+.esqueci-form input[type="text"] {
+  width: 100%;
+  background-color: var(--preto-azul-50);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 15px 20px;
+  color: var(--branco);
+  font-size: 14px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.esqueci-form input::placeholder {
+  color: var(--branco-cinza-60);
+}
+
+.esqueci-form input:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(34, 85, 216, 0.25);
+}
+
+/* ── Botão Enviar ── */
+
+.esqueci-form .btn-entrar {
+  width: 100%;
+  background-color: var(--azul);
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+  color: var(--branco);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition:
+    opacity 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.esqueci-form .btn-entrar:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(34, 85, 216, 0.35);
+}
+
+.esqueci-form .btn-entrar:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+/* ── Rodapé ── */
+
+.esqueci-footer {
+  margin-top: 28px;
+  font-size: clamp(13px, 3.5vw, 15px);
+  color: var(--branco-cinza-60);
+  width: 100%;
+}
+
+.esqueci-footer a {
+  color: var(--azul);
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    opacity 0.2s ease,
+    text-decoration-color 0.2s ease;
+  margin-left: 2px;
+}
+
+.esqueci-footer a:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Responsividade (tablet e desktop) ── */
+
+@media (min-width: 481px) {
+  .esqueci-container {
+    padding: 40px 32px 48px;
+  }
+
+  .esqueci-header {
+    margin-bottom: 36px;
+  }
+
+  .esqueci-logo img {
+    width: 52px;
+  }
+
+  .esqueci-subtitle {
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 769px) {
+  .esqueci-container {
+    padding: 48px 40px;
+  }
+
+  .esqueci-form-wrapper {
+    max-width: 440px;
+  }
+
+  .esqueci-header {
+    margin-bottom: 40px;
+  }
+
+  .esqueci-logo {
+    gap: 18px;
+  }
+
+  .esqueci-logo img {
+    width: 56px;
+  }
+
+  .esqueci-subtitle {
+    margin-top: 20px;
+    line-height: 1.65;
+  }
+
+  .esqueci-form {
+    gap: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .esqueci-form-wrapper {
+    max-width: 450px;
+  }
+}
