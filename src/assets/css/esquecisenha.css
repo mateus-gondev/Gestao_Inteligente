@@ -89,21 +89,20 @@
 
 .esqueci-logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .esqueci-logo img {
-  width: 48px;
+  width: 38px;
   height: auto;
   flex-shrink: 0;
 }
 
 .esqueci-logo h1 {
-  font-size: clamp(20px, 5vw, 28px);
+  font-size: clamp(18px, 2.5vw, 22px);
   font-weight: 700;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   line-height: 1.2;
 }
@@ -175,16 +174,15 @@
     background-color 0.25s ease;
 }
 
-.esqueci-form .btn-entrar:hover {
-  opacity: 0.95;
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(34, 85, 216, 0.35);
-}
 
-.esqueci-form .btn-entrar:active {
-  transform: scale(0.98);
-  box-shadow: none;
-}
+.esqueci-form.btn-entrar:hover {
+    opacity: 0.9;
+  }
+  
+  .esqueci-form.btn-entrar:active {
+    transform: scale(0.98);
+  }
+  
 
 /* ── Rodapé ── */
 
@@ -207,7 +205,6 @@
 
 .esqueci-footer a:hover {
   opacity: 0.85;
-  text-decoration: underline;
   text-underline-offset: 3px;
 }
 
