@@ -86,12 +86,13 @@ function Cadastro() {
         </form>
 
         <p className="login-footer">
-          Já possui uma conta?
-          <Link to="/" state={{ from: location.pathname }}>
-            {" "}
-            Entrar
-          </Link>
+            Já possui uma conta?
+            <Link to="/" state={{ from: location.pathname }}>
+              {" "}
+              Entrar
+            </Link>
         </p>
+        
 
       </main>
 

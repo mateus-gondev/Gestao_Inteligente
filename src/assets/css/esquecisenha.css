@@ -84,18 +84,19 @@
 
 .esqueci-header {
   width: 100%;
-  margin-bottom: 32px;
+  max-width: 400px;
 }
 
 .esqueci-logo {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-left: 50px;
 }
 
 .esqueci-logo img {
-  width: 38px;
-  height: auto;
+  width: 30px;
+  height: 52px;
   flex-shrink: 0;
 }
 

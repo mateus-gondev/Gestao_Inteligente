@@ -141,7 +141,7 @@
 }
 
 .login-logo img {
-  width: 100px;
+  width: 38px;
   height: auto;
   flex-shrink: 0;
 }
@@ -322,24 +322,33 @@
 
 /* ── Rodapé ── */
 .login-footer {
-  margin-top: 28px;
-  font-size: 15px;
-  color: var(--branco-cinza-60);
-  max-width: 500px;
-  width: 100%;
-} 
+    margin-top: 28px;
+    margin-left: 110px;
+    font-size: 15px;
+    color: var(--branco-cinza-60);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .login-footer a {
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+    margin-left: 2px;
+  }
+  
+  .login-footer a:hover {
+    opacity: 0.85;
+  }
 
-.login-footer a {
-  color: var(--azul);
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s ease;
-  margin-left: 2px;
-}
+  .container-p{
+    left: 90px;
+  }
 
-.login-footer a:hover {
-  opacity: 0.85;
-}
+  .container-p{
+    margin-left: -30px;
+  }
 
 /* ── Responsividade ── */
 

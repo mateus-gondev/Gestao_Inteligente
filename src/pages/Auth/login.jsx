@@ -92,6 +92,7 @@ function Login() {
           </button>
         </form>
 
+        <div className="container-p">
         <p className="login-footer">
           Não possui uma conta?
           <Link to="/cadastro" state={{ from: location.pathname }}>
@@ -99,6 +100,8 @@ function Login() {
             Cadastra-se
           </Link>
         </p>
+        </div>
+
       </main>
     </div>
   );
