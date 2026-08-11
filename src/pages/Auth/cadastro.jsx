@@ -10,6 +10,7 @@ function Cadastro() {
   const location = useLocation();
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
+  const [setor_curso, setSetor_curso] = useState("");
   const [senha, setSenha] = useState("");
   const [mostrarSenha, setMostrarSenha] = useState(false);
 
@@ -20,7 +21,7 @@ function Cadastro() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log({ nome, email, senha });
+    console.log({ nome, email, setor_curso, senha });
   }
 
   return (
@@ -55,6 +56,14 @@ function Cadastro() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="email"
+            required
+          />
+
+          <input
+            type="text"
+            placeholder="Setor ou Curso"
+            value={setor_curso}
+            onChange={(e) => setSetor_curso(e.target.value)}
             required
           />
 
