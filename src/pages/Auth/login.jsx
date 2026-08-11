@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-import "../../assets/css/login.css";
+import "../../assets/css/login_css/login.css";
 import bannerLogin from "../../assets/imgs/BannerLogin.png";
 import logoReseti from "../../assets/imgs/LogoReseti.png";
 

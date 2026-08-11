@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import "../../assets/css/esquecisenha.css";
+import "../../assets/css/login_css/esquecisenha.css";
 import logoReseti from "../../assets/imgs/LogoReseti.png";
 
 function Esqueci(){
