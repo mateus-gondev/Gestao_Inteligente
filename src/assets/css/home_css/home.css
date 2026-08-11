@@ -37,24 +37,81 @@
     background-color: var(--azul);
 }
 
-.exit{
-    margin-top: 400px;
-}
-
-.exit a{
-    color: var(--azul);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.exit a:hover{
-    color: var(--branco);
-    font-size: 20px;
-    font-weight: 600;
-}
-
 .container{
     flex: 1;
     padding: 40px;
     background-color: var(--branco)
+}
+
+/*Foto Perfil*/
+/* Container no topo direito */
+.perfil-container {
+    position: fixed;
+    top: 4%;
+    right: 30px;
+    display: inline-block;
+    z-index: 999;
+}
+
+.perfil-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    user-select: none; 
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito sutil de brilho ao passar o mouse */
+.perfil-avatar:hover {
+    background-color: var(--azul-hover);
+}
+
+/* O Menu Dropdown flutuante */
+.perfil-menu {
+    position: absolute;
+    right: 0;
+    top: 52px;
+    background-color: var(--branco);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Links do menu */
+.perfil-menu a {
+    color: var(--preto-cinza);
+    padding: 10px 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.perfil-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Linha divisória */
+.perfil-menu hr {
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    margin: 4px 0;
+}
+
+/* Item de logout */
+.perfil-menu a.logout {
+    color: var(--vermelho);
 }

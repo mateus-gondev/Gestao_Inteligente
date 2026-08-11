@@ -3,7 +3,9 @@
   --preto-azul-50: rgba(10, 16, 28, 0.5);  
   --branco-cinza-60: rgba(255, 255, 255, 0.6); 
   --branco: #FFFFFF;                       
-  --azul: #2255D8;  
+  --azul: #2255D8;
+  --azul-hover: #4338ca; 
+  --vermelho: #ff4d4d;
 }
 
 * {
