@@ -270,3 +270,25 @@
     object-position: center;
     display: block;
 }
+
+.cadastro-alert {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cadastro-alert.sucesso {
+    background-color: #e8f7ee;
+    color: #18794e;
+    border: 1px solid #a8dfc1;
+}
+
+.cadastro-alert.erro {
+    background-color: #fdecec;
+    color: #b42318;
+    border: 1px solid #f3b4b0;
+}
