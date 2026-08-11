@@ -43,6 +43,26 @@
     background-color: var(--branco)
 }
 
+/*Icone de Notificação*/
+.container-notifica{
+    position: fixed;
+    top: 4.5%;
+    right: 110px;
+    display: inline-block;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.container-notifica img{
+    width: 45px;
+    height: 45px;
+}
+
+.container-notifica img:hover{
+    width: 46px;
+    height: 46px;
+}
+
 /*Foto Perfil*/
 /* Container no topo direito */
 .perfil-container {
@@ -52,6 +72,7 @@
     display: inline-block;
     z-index: 999;
 }
+
 
 .perfil-avatar {
     width: 55px;
@@ -81,7 +102,7 @@
 .perfil-menu {
     position: absolute;
     right: 0;
-    top: 52px;
+    top: 60px;
     background-color: var(--branco);
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
@@ -90,6 +111,31 @@
     display: flex;
     flex-direction: column;
 }
+
+.chat-menu{
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: var(--branco);
+    min-width: 160px;
+    width: 200px;
+    height: 400px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-menu p{
+    color: var(--preto-cinza);
+    padding: 10px 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 /* Links do menu */
 .perfil-menu a {

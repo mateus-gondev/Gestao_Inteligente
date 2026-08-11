@@ -1,13 +1,21 @@
 import { useState, useEffect, useRef } from 'react';
 
 import "../../assets/css/home_css/home.css";
+import iconNotifica from '../../assets/icons/notifica.png';
 
 function Home(){
+
+    const [chatAberto, setChatAberto] = useState(false);
+    const chatRef = useRef(null);
 
     const [menuAberto, setMenuAberto] = useState(false);
     const menuRef = useRef(null);
 
-     // Alterna o estado do menu (abre/fecha) ao clicar na foto
+    // Alterna o estado do menu (abre/fecha) ao clicar na foto
+    const alteraChat =() => {
+        setChatAberto(!chatAberto);
+    };
+
     const alternarMenu = () => {
         setMenuAberto(!menuAberto);
     };
@@ -15,8 +23,9 @@ function Home(){
     // Fecha o menu automaticamente se o usuário clicar fora dele
     useEffect(() => {
         const clicarFora = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            if (menuRef.current && !menuRef.current.contains(event.target) || chatRef.current && !chatRef.current.contains(event.target)) {
                 setMenuAberto(false);
+                setChatAberto(false);
             }
         };
 
@@ -46,6 +55,20 @@ function Home(){
                 <nav className="container-nav">
                     <h1>Olá Usuário, seja bem vindo!</h1>
                     <p>Projeto em desenvolvimento</p>
+                
+                    <div className="container-notifica">
+                        {/* Icone de Notificação*/}
+                        <div className="icoin-notifica" onClick={alteraChat}>
+                            <img src={iconNotifica} alt="icon" className="icon-sinho" />
+                        </div>
+
+                        
+                            {chatAberto && (
+                                <div className="chat-menu">
+                                    <p>Chat</p>
+                                </div>
+                            )}
+                    </div>
 
                     <div className="perfil-container" ref={menuRef}>
                         {/* Botão com a foto de perfil */}
@@ -56,10 +79,10 @@ function Home(){
                         {/* Menu renderizado condicionalmente se estiver aberto */}
                         {menuAberto && (
                             <div className="perfil-menu">
-                            <a href="#perfil" onClick={() => setMenuAberto(false)}>Meu Perfil</a>
-                            <a href="#config" onClick={() => setMenuAberto(false)}>Configurações</a>
-                            <hr />
-                            <a href="/" className="logout" onClick={() => setMenuAberto(false)}>Sair</a>
+                                <a href="#perfil" onClick={() => setMenuAberto(false)}>Meu Perfil</a>
+                                <a href="#config" onClick={() => setMenuAberto(false)}>Configurações</a>
+                                <hr />
+                                <a href="/" className="logout" onClick={() => setMenuAberto(false)}>Sair</a>
                             </div>
                         )}
                     </div>
