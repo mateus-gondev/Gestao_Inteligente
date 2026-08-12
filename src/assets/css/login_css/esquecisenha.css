@@ -90,15 +90,14 @@
 .esqueci-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-left: 50px;
 }
 
 .esqueci-logo img {
-  width: 30px;
-  height: 52px;
-  flex-shrink: 0;
-}
+    width: 35px;
+    height: 35px;
+  }
 
 .esqueci-logo h1 {
   font-size: clamp(18px, 2.5vw, 22px);
@@ -228,9 +227,8 @@
 
   .esqueci-subtitle {
     margin-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
-
 
 }
 
@@ -280,7 +278,10 @@
   }
 
   .esqueci-logo img {
-    width: 56px;
+    width: 36px;
+    height: 36px;        
+    object-fit: contain; 
+    flex-shrink: 0;
   }
 
   .esqueci-subtitle {

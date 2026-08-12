@@ -1,163 +1,17 @@
-.wrapper-home{
+.wrapper-home {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.sidebar{
-    width: 250px;
-    background-color: var(--preto-cinza);
-    color: var(--branco);
-    padding: 20px;
-}
-
-.sidebar h2 {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar li {
-    margin-bottom: 15px;
-}
-
-.sidebar a {
-    color: var(--branco);
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.sidebar a:hover {
-    background-color: var(--azul);
-}
-
-.container{
+.container {
     flex: 1;
     padding: 40px;
-    background-color: var(--branco)
-}
-
-/*Icone de Notificação*/
-.container-notifica{
-    position: fixed;
-    top: 4.5%;
-    right: 110px;
-    display: inline-block;
-    z-index: 999;
-    cursor: pointer;
-}
-
-.container-notifica img{
-    width: 45px;
-    height: 45px;
-}
-
-.container-notifica img:hover{
-    width: 46px;
-    height: 46px;
-}
-
-/*Foto Perfil*/
-/* Container no topo direito */
-.perfil-container {
-    position: fixed;
-    top: 4%;
-    right: 30px;
-    display: inline-block;
-    z-index: 999;
-}
-
-
-.perfil-avatar {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background-color: var(--azul);
-    color: var(--branco);
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    user-select: none; 
-    transition: background-color 0.2s ease;
-}
-
-/* Efeito sutil de brilho ao passar o mouse */
-.perfil-avatar:hover {
-    background-color: var(--azul-hover);
-}
-
-/* O Menu Dropdown flutuante */
-.perfil-menu {
-    position: absolute;
-    right: 0;
-    top: 60px;
     background-color: var(--branco);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 6px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-menu{
-    position: absolute;
-    right: 0;
-    top: 45px;
-    background-color: var(--branco);
-    min-width: 160px;
-    width: 200px;
-    height: 400px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 6px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-menu p{
-    color: var(--preto-cinza);
-    padding: 10px 16px;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    box-sizing: border-box;
+    min-width: 0;
 }
 
 
-/* Links do menu */
-.perfil-menu a {
-    color: var(--preto-cinza);
-    padding: 10px 16px;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 14px;
-}
-
-.perfil-menu a:hover {
-    background-color: #f5f5f5;
-}
-
-/* Linha divisória */
-.perfil-menu hr {
-    border: 0;
-    border-top: 1px solid #eeeeee;
-    margin: 4px 0;
-}
-
-/* Item de logout */
-.perfil-menu a.logout {
-    color: var(--vermelho);
+.conteudo-home {
+    margin-top: 40px;
 }

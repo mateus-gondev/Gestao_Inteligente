@@ -1,0 +1,137 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.header-titulo h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #000;
+}
+
+.header-titulo p {
+    margin-top: 4px;
+    font-size: 18px;
+    color: #000;
+}
+
+.header-acoes {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.container-notifica {
+    position: relative;
+    display: inline-block;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.container-notifica img {
+    width: 35px;
+    height: 35px;
+    transition: width 0.2s ease,
+        height 0.2s ease;
+}
+
+.container-notifica img:hover {
+    width: 37px;
+    height: 37px;
+}
+
+/* MENU DE NOTIFICAÇÕES */
+.chat-menu {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 200px;
+    height: 400px;
+    background-color: var(--branco);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-menu p {
+    color: var(--preto-cinza);
+    padding: 10px 16px;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* PERFIL */
+.perfil-container {
+    position: relative;
+    display: inline-block;
+    z-index: 999;
+}
+
+
+.perfil-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.perfil-avatar:hover {
+    background-color: var(--azul-hover);
+}
+
+/* MENU DO PERFIL */
+.perfil-menu {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: var(--branco);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-menu a {
+    color: var(--preto-cinza);
+    padding: 10px 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.perfil-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Linha divisória */
+.perfil-menu hr {
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    margin: 4px 0;
+}
+
+/* Logout */
+.perfil-menu a.logout {
+    color: var(--vermelho);
+}
