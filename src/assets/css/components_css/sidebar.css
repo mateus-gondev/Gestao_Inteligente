@@ -25,11 +25,17 @@
     margin-bottom: 15px;
 }
 
+.sidebar .icone-side{
+    width: 20px;
+    margin-right: 10px;
+}
+
 .sidebar a {
     color: var(--branco);
     text-decoration: none;
     font-size: 18px;
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 10px;
     border-radius: 4px;
     transition: background 0.3s;

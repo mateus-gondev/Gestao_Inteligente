@@ -4,6 +4,7 @@
   --branco-cinza-60: rgba(255, 255, 255, 0.6); 
   --branco: #FFFFFF;                       
   --azul: #2255D8;
+  --azul_claro: rgba(34, 85, 216, 0.10);
   --azul-hover: #4338ca; 
   --vermelho: #ff4d4d;
 }

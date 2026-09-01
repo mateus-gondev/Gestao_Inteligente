@@ -9,6 +9,14 @@
     margin-bottom: 30px;
 }
 
+.container-usuarios h1{
+    color: var(--azul);
+}
+
+.container-usuarios p{
+    color: var(--preto-cinza);
+}
+
 
 .usuarios-titulo h1 {
     margin: 0;
@@ -24,15 +32,27 @@
     font-size: 15px;
 }
 
+.container-barra-topo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 .btn-novo-usuario {
+    margin-left: auto;
+    height: 44px;
     border: none;
+    padding: 0 20px;
+    border-radius: 9px;
     background-color: var(--azul);
     color: var(--branco);
-    padding: 11px 18px;
-    border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    margin-left: auto;
+    white-space: nowrap;
     transition:
         background-color 0.2s ease,
         transform 0.15s ease,
@@ -50,23 +70,21 @@
 }
 
 .usuarios-ferramentas {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.campo-pesquisa {
-    width: 330px;
-    height: 42px;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 0 13px;
+}
+
+.campo-pesquisa {
+    width: 380px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
     background-color: var(--branco);
-    border: 1px solid #e1e1e1;
-    border-radius: 8px;
+    border: 1px solid #dedede;
+    border-radius: 9px;
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
@@ -96,8 +114,19 @@
 }
 
 .contador-usuarios {
-    color: #777;
+    min-width: 82px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    background-color: var(--azul_claro);
+    border: 1px solid rgba(34, 85, 216, 0.15);
+    border-radius: 9px;
+    color: var(--azul);
     font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .tabela-container {
@@ -286,6 +315,27 @@
 
 }
 
+@media (max-width: 700px) {
+
+    .container-barra-topo {
+        flex-wrap: wrap;
+    }
+
+    .usuarios-ferramentas {
+        width: 100%;
+    }
+
+    .campo-pesquisa {
+        flex: 1;
+        width: auto;
+    }
+
+    .btn-novo-usuario {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
 
 @media (max-width: 650px) {
 
@@ -296,6 +346,7 @@
 
     .btn-novo-usuario {
         width: 100%;
+        margin-left: 125vh;
     }
 
 

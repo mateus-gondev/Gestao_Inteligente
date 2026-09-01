@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import API_ROUTES from "../../services/api";
 import "../../assets/css/home_css/usuarios.css";
 
+import Lupa from "../../assets/icons/lupa.png";
+
 function Usuarios() {
     const [usuarios, setUsuarios] = useState([]);
     const [carregando, setCarregando] = useState(true);
@@ -38,21 +40,20 @@ function Usuarios() {
     return (
         <div className="pagina-usuarios">
             <div className="usuarios-header">
-                <div>
+                <div className="container-usuarios">
+                    <hr style={{ border: 'none', borderTop: '1px solid #e0e0e0', margin: '24px 0' }} />
+
                     <h1>Usuários</h1>
                     <p>Gerenciamento de usuários do sistema.</p>
                 </div>
             </div>
 
-        {/* NOVO USUÁRIO */}
-        <button className="btn-novo-usuario">+ Novo usuário</button>
-
+    <div className="container-barra-topo">
         {/* BARRA DE PESQUISA */}
         {!carregando && !erro && (
             <div className="usuarios-ferramentas">
                 <div className="campo-pesquisa">
-                    <span className="icone-pesquisa">🔎</span>
-
+                    <img src={Lupa} alt="Lupa" className="icone-pesquisa" /> 
                     <input type="text" placeholder="Pesquisar usuário..." />
                 </div>
 
@@ -63,6 +64,10 @@ function Usuarios() {
             </div>
         )}
 
+        {/* NOVO USUÁRIO */}
+        <button className="btn-novo-usuario">+ Novo usuário</button>
+    </div>
+    
         {/* CARREGANDO */}
         {carregando && <p>Carregando usuários...</p>}
 
