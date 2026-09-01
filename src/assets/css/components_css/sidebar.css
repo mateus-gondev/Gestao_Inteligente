@@ -8,11 +8,49 @@
     box-shadow: 4px 0 12px rgba(0, 0, 0, 0.18);
     position: relative;
     z-index: 10;
+    transition: width 0.3s ease; /* Transição para o efeito de abrir/fechar */
 }
 
-.sidebar h2 {
+/* 5. Nova classe para quando a sidebar estiver menor */
+.sidebar.fechada {
+    width: 80px; /* Largura suficiente apenas para os ícones */
+    padding: 20px 10px; /* Ajusta o padding para centralizar */
+}
+
+.sidebar.fechada a{
+    margin-left: 10px;
+}
+
+/* Alinha o título e o botão lado a lado */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
-    text-align: center;
+}
+
+/* Remove a margem padrão do h2 para alinhar com o botão */
+.sidebar h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Estilização simples do botão Hambúrguer */
+.btn-hamburguer {
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    display: block;
+    margin: 0 auto; 
+    margin-left: 10px;
+}
+
+
+.sidebar.fechada .icone-side {
+    margin-right: 0;
 }
 
 .sidebar ul {
@@ -45,7 +83,6 @@
     background-color: var(--azul);
 }
 
-/* Página atualmente selecionada */
 .sidebar a.active {
     background-color: var(--azul);
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"; 
 import { NavLink } from "react-router-dom";
 import "../assets/css/components_css/sidebar.css";
 
@@ -8,42 +8,46 @@ import Notebook from "../assets/icons/notebook.png";
 import Usuario from "../assets/icons/usuario.png";
 
 function Sidebar() {
-    return (
-        <aside className="sidebar">
+    
+    const [aberta, setAberta] = useState(true);
 
-            <h2>Gestão Inteligente</h2>
+    return (
+        <aside className={`sidebar ${aberta ? "" : "fechada"}`}>
+
+            <div className="sidebar-header">
+                {aberta && <h2>Gestão Inteligente</h2>}
+                
+                <button className="btn-hamburguer" onClick={() => setAberta(!aberta)}>
+                    ☰
+                </button>
+            </div>
 
             <nav>
                 <ul>
-
                     <li>                        
                         <NavLink to="/home" end>                    
                             <img src={Inicio} alt="Home" className="icone-side" />
-                            Início
+                            {aberta && <span>Início</span>} 
                         </NavLink>
                     </li>
-
                     <li>                        
                         <NavLink to="/home/reservas">
                             <img src={Reserva} alt="Reserva" className="icone-side" />
-                            Reservas
+                            {aberta && <span>Reservas</span>}
                         </NavLink>
                     </li>
-
                     <li>
                         <NavLink to="/home/equipamentos">
                             <img src={Notebook} alt="Notebook" className="icone-side" />
-                            Equipamentos
+                            {aberta && <span>Equipamentos</span>}
                         </NavLink>
                     </li>
-
                     <li>                        
                         <NavLink to="/home/usuarios">
                             <img src={Usuario} alt="Usuario" className="icone-side" />
-                            Usuários
+                            {aberta && <span>Usuários</span>}
                         </NavLink>
                     </li>
-
                 </ul>
             </nav>
         </aside>
